@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "\\WPSH\\SignInWithApplePlugin\\": "src/"
+      "WPSH\\SignInWithApplePlugin\\": "src/"
     }
   },
   "scripts": {
