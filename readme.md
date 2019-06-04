@@ -1,4 +1,4 @@
-# Signin with Apple for WordPress
+# Sign In with Apple for WordPress
 
 A WordPress plugin to configure and enable [Sign In with Apple JS](https://developer.apple.com/documentation/signinwithapplejs).
 
@@ -8,6 +8,8 @@ A WordPress plugin to configure and enable [Sign In with Apple JS](https://devel
 - [Apple Developer Account](https://developer.apple.com/programs/enroll/) ($99 per year) for registering your site with Apple.
 
 - [Configured Sign In with Apple for the web](https://help.apple.com/developer-account/#/dev1c0e25352).
+
+- [Service ID identifier](https://developer.apple.com/account/resources/identifiers/list/serviceId) (such as `com.yourdomain.signinwithappleplugin`) with "Sign In with Apple" service enabled.
 
 
 ## Credits
