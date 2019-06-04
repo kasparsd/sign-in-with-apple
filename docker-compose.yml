@@ -11,7 +11,7 @@ services:
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
-      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
 
   wordpress:
     image: wordpress:latest
@@ -26,6 +26,8 @@ services:
     restart: always
     environment:
       WORDPRESS_DEBUG: 1
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
 
   wpcli:
     image: wordpress:cli
