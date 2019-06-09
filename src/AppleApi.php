@@ -46,10 +46,14 @@ class AppleApi {
 		);
 	}
 
+	protected function nonce_action( $action ) {
+		return self::STATE_NONCE_ACTION . $action;
+	}
+
 	public function state( $action ) {
 		return sprintf(
 			'%s-%s',
-			wp_create_nonce( self::STATE_NONCE_ACTION . $action ),
+			wp_create_nonce( $this->nonce_action( $action ) ),
 			$action
 		);
 	}
@@ -68,7 +72,10 @@ class AppleApi {
 	}
 
 	public function verify_state( $state ) {
-		return ( 1 === wp_verify_nonce( $this->parse_state( $state )[0], $this->parse_state( $state )[1] ) );
+		$nonce = $this->parse_state( $state )[0];
+		$action = $this->nonce_action( $this->parse_state( $state )[1] );
+
+		return ( 1 === wp_verify_nonce( $nonce, $action ) );
 	}
 
 }
