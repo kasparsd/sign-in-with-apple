@@ -79,9 +79,9 @@ class PluginController {
 	}
 
 	public function login_init() {
-		if ( isset( $_POST['id_token'], $_POST['state'] ) ) {
-			$id_token = filter_input( INPUT_POST, 'id_token', FILTER_SANITIZE_STRING );
-			$state = filter_input( INPUT_POST, 'state', FILTER_SANITIZE_STRING );
+		if ( isset( $_GET['id_token'], $_GET['state'] ) ) {
+			$id_token = filter_input( INPUT_GET, 'id_token', FILTER_SANITIZE_STRING );
+			$state = filter_input( INPUT_GET, 'state', FILTER_SANITIZE_STRING );
 
 			if ( $this->apple_api()->verify_state( $state ) ) {
 				$token_parser = new Parser();
