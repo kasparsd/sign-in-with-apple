@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Sign In with Apple
- * Description: Enable Sign in with Apple JS.
+ * Description: Enable Sign in with Apple.
  * Plugin URI: https://github.com/kasparsd/signin-with-apple
  * Author: Kaspars Dambis
  * Author URI: https://kaspars.net
