@@ -134,10 +134,11 @@ class PluginController {
 		$apple_user = new AppleSignInUser( wp_get_current_user() );
 
 		?>
+		<h2><?php esc_html_e( 'Sign In with Apple' ); ?></h2>
 		<table class="form-table">
 			<tr>
 				<th>
-					<?php esc_html_e( 'Log In with Apple' ); ?>
+					<?php esc_html_e( 'User Login' ); ?>
 				</th>
 				<td>
 					<?php
