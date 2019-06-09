@@ -33,7 +33,6 @@ The plugin must be installed as [a Composer dependency](https://packagist.org/pa
 ## To Do
 
 - [ ] Add `id_token` validation based on the [Apple public key](https://developer.apple.com/documentation/signinwithapplerestapi/fetch_apple_s_public_key_for_verifying_token_signature).
-
 - [ ] Enable new user signup for WooCommerce customers.
 
 
