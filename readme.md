@@ -1,6 +1,6 @@
 # Sign In with Apple for WordPress
 
-A WordPress plugin to configure and enable [Sign In with Apple JS](https://developer.apple.com/documentation/signinwithapplejs).
+A WordPress plugin to configure and enable [Sign In with Apple](https://developer.apple.com/sign-in-with-apple/).
 
 
 ## Requirements
