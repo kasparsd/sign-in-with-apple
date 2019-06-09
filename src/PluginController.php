@@ -80,7 +80,7 @@ class PluginController {
 
 	public function print_signin_button() {
 		printf(
-			'<a href="%s">Sign In with Apple</a>',
+			'<a href="%s" class="button">Sign In with Apple</a>',
 			esc_url( $this->apple_api()->authorize_url( 'login' ) )
 		);
 	}
