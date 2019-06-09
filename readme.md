@@ -2,6 +2,8 @@
 
 A WordPress plugin to configure and enable [Sign In with Apple](https://developer.apple.com/sign-in-with-apple/).
 
+**Important:** This pugin is currently work in progress! Please don't use it on production sites.
+
 
 ## Requirements
 
