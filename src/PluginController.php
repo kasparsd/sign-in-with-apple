@@ -141,15 +141,15 @@ class PluginController {
 								'<p>Your Apple user ID: <code>%s</code></p>',
 								esc_html( $apple_user->id() )
 							);
-						} else {
-							printf(
-								'<p>
-									Associate this account with your Apple ID:
-									<a href="%s" class="button">Sign In with Apple</a>
-								</p>',
-								esc_url( $this->apple_api()->authorize_url( 'register' ) )
-							);
 						}
+
+						printf(
+							'<p>
+								Associate this account with your Apple ID:
+								<a href="%s" class="button">Sign In with Apple</a>
+							</p>',
+							esc_url( $this->apple_api()->authorize_url( 'register' ) )
+						);
 					} else {
 						printf(
 							'<p>
