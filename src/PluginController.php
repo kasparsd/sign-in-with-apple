@@ -95,6 +95,8 @@ class PluginController {
 						// Store the user identifier for the current user.
 						$user = new AppleSignInUser( wp_get_current_user() );
 						$user->set_id( $sub );
+						wp_redirect( get_edit_profile_url( $user->user_id() ) );
+						exit;
 					} elseif ( 'login' === $action && ! is_user_logged_in() ) {
 						// Log-in user by the Apple ID.
 						try {
