@@ -47,15 +47,19 @@ class PluginController {
 	}
 
 	public function signin_service_id() {
-		return sanitize_key( $this->settings->get( self::OPTION_KEY_SERVICE_ID ) );
+		return $this->sanitize_setting( $this->settings->get( self::OPTION_KEY_SERVICE_ID ) );
 	}
 
 	public function signin_team_id() {
-		return sanitize_key( $this->settings->get( self::OPTION_KEY_TEAM_ID ) );
+		return $this->sanitize_setting( $this->settings->get( self::OPTION_KEY_TEAM_ID ) );
 	}
 
 	public function signin_key_id() {
-		return sanitize_key( $this->settings->get( self::OPTION_KEY_KEY_ID ) );
+		return $this->sanitize_setting( $this->settings->get( self::OPTION_KEY_KEY_ID ) );
+	}
+
+	protected function sanitize_setting( $value ) {
+		return preg_replace( '#[^a-zA-Z0-9]+\.#', '', (string) $value );
 	}
 
 	public function apple_api() {
