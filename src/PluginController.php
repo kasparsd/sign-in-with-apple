@@ -38,8 +38,15 @@ class PluginController {
 		}
 	}
 
+	/**
+	 * Check if the required configuration is present for this to work.
+	 *
+	 * For now we just need the Service ID such as `com.example.wplogin`.
+	 *
+	 * @return boolean
+	 */
 	public function is_configured() {
-		return ( ! empty( $this->signin_service_id() ) && ! empty( $this->signin_team_id() ) && ! empty( $this->signin_key_id() ) );
+		return ( ! empty( $this->signin_service_id() ) );
 	}
 
 	public function signin_redirect_uri() {
@@ -153,15 +160,10 @@ class PluginController {
 					} else {
 						printf(
 							'<p>
-								Please specify
-								<code>%s</code>,
-								<code>%s</code> and
-								<code>%s</code>
-								in <a href="%s">the settings</a>.
+								Please specify <code>%s</code>
+								in <a href="%s">the site options</a>.
 							</p>',
 							esc_html( $this->settings->key( self::OPTION_KEY_SERVICE_ID ) ),
-							esc_html( $this->settings->key( self::OPTION_KEY_TEAM_ID ) ),
-							esc_html( $this->settings->key( self::OPTION_KEY_KEY_ID ) ),
 							esc_url( admin_url( 'options.php' ) )
 						);
 					}
